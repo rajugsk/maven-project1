@@ -1,7 +1,7 @@
 node {
 	stage('SCm Checkout') {
 	  
-		git 'https://github.com/rajugsk/maven-project1'
+	  git 'https://github.com/rajugsk/maven-project1'
 	
 	}
 	
@@ -10,8 +10,5 @@ node {
 	
 	}
 
-	stage ('Email configuration'){
-	mail bcc: '', body: 'The run is success', cc: '', from: '', replyTo: '', subject: 'testing from jenkins', to: 'tejo.raju@GMAIL.COM'
 	
-	}
 }
