@@ -6,9 +6,7 @@ node {
 	}
 	
 	stage('Compile-package') {
-	  def mvnHome = tool name: 'maven3', type: 'maven'
-	  chmod +x /root/guide-maven-intro/apache-maven/bin/mvn
-	  sh"${mvnHome}/bin/mvn package"
+	  sh'mvn package'
 	
 	}
 
