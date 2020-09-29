@@ -9,8 +9,7 @@ node{
    }
    
    stage('SonarQube Analysis') {
-        tool name: 'maven3', type: 'maven'
-        sh "sonar:sonar"
+        tool name: 'sonarqube', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
         }
     
    
