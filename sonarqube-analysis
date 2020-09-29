@@ -10,7 +10,7 @@ node{
    
    stage('SonarQube Analysis') {
         tool name: 'maven3', type: 'maven'
-        sh "sonarqube:sonarqube"
+        sh "sonar:sonar"
         }
     
    
