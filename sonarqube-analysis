@@ -13,12 +13,12 @@ node{
         withSonarQubeEnv('jenkins-sonarqube') {
         sh "${scannerHome}/bin/sonar-scanner"
                 }
-    
+   } 
    
    stage('Email Notification'){
       mail bcc: '', body: '''Hi Welcome to jenkins email alerts
       Thanks
-      Hari''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'tejo.raju@gmail.com'
+      GSK''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'tejo.raju@gmail.com'
    }
    
 
