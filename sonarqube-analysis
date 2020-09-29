@@ -9,7 +9,7 @@ node{
    }
    
    stage('SonarQube Analysis') {
-        tool name: 'sonarqube', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+       def scannerHome = tool name: 'sonarqube', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
         withSonarQubeEnv('jenkins-sonarqube') {
         sh "${scannerHome}/bin/sonar-scanner"
                 }
