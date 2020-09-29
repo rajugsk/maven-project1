@@ -11,7 +11,7 @@ node{
    stage('SonarQube Analysis') {
        def scannerHome = tool name: 'sonarqube', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
         withSonarQubeEnv('jenkins-sonarqube') {
-        sh "${scannerHome}/bin/sonar-scanner"
+        sh "mvn sonar:sonar -Dsonar.projectKey=in.javahome:myweb "
                 }
    } 
    
