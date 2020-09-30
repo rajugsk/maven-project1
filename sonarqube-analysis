@@ -16,7 +16,7 @@ node{
    } 
    
    sshagent(['ec2user']) {
-   sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@3-9-146-25:/var/www/html'
+   sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@ec2-3-9-146-25.eu-west-2.compute.amazonaws.com:/var/www/html'
  }
    
    stage('Email Notification'){
